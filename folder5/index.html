@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolutionary View: Origins of Universe & Life</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            min-height: 100vh;
+        }
+
+        .slides-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #1a5490;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #2874a6;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        p, li {
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .claim-box {
+            background: #e8f4f8;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .challenge-box {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .question-box {
+            background: #f0e6ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #8e44ad;
+        }
+
+        .highlight {
+            background: #ffe6e6;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+            margin: 20px 0;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #19547b;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #1a5490;
+            transform: scale(1.05);
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #19547b;
+            color: #19547b;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #19547b;
+            color: white;
+        }
+
+        ul {
+            margin-left: 30px;
+        }
+
+        .timeline {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="home-btn">← Home</a>
+
+    <div class="slides-container">
+        <div class="slide active">
+            <h1>🌌 Evolution & Origins</h1>
+            <h2>Naturalistic Explanations - Prepare Your Response!</h2>
+
+            <div class="highlight">
+                <p><strong>⚡ MAIN DEBATE TOPIC ⚡</strong></p>
+                <p>This section presents common evolutionary and naturalistic arguments about the origin of the universe and life. Your task: <strong>Study these claims carefully and prepare biblical and scientific responses.</strong></p>
+            </div>
+
+            <div class="question-box">
+                <h3>📖 Your Mission:</h3>
+                <ul>
+                    <li>Understand what evolutionists/naturalists actually claim (not strawman versions)</li>
+                    <li>Identify strengths and weaknesses in their arguments</li>
+                    <li>Prepare biblical responses with gentleness and respect</li>
+                    <li>Be ready to defend the Christian worldview with evidence and logic</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>🛡️ Scripture Foundation:</h3>
+                <p><em>"But in your hearts revere Christ as Lord. Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with gentleness and respect."</em> <strong>— 1 Peter 3:15</strong></p>
+            </div>
+
+            <p><strong>Overview of Topics:</strong></p>
+            <ul>
+                <li>Origin of the Universe (Big Bang cosmology)</li>
+                <li>Origin of Life (Abiogenesis)</li>
+                <li>Evolution by Natural Selection</li>
+                <li>Human Origins</li>
+                <li>Questions for Christians to Address</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>Claim 1: The Universe Created Itself</h2>
+
+            <div class="claim-box">
+                <h3>The Naturalistic Position:</h3>
+                <p><strong>"The universe began with the Big Bang approximately 13.8 billion years ago. It came from a singularity—an infinitely dense point—and has been expanding ever since. No Creator is necessary; the laws of physics explain it."</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Supporting Arguments:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>Cosmic Microwave Background:</strong> Radiation left over from the Big Bang detected throughout space</li>
+                    <li><strong>Expanding Universe:</strong> Galaxies are moving apart, suggesting expansion from a point</li>
+                    <li><strong>Quantum Fluctuations:</strong> Some physicists argue the universe could arise from "quantum fluctuations" in a vacuum</li>
+                    <li><strong>Multiverse Hypothesis:</strong> Our universe might be one of countless universes that spontaneously form</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>🎯 Questions to Prepare Responses For:</h3>
+
+                <p><strong>1. The Cause Question:</strong><br>
+                What caused the Big Bang? Can something come from absolutely nothing? Even quantum fluctuations require pre-existing quantum fields and laws.</p>
+
+                <p style="margin-top: 15px;"><strong>2. The Fine-Tuning Problem:</strong><br>
+                The universe's fundamental constants (gravity, electromagnetic force, etc.) are precisely tuned for life. Change any by a tiny fraction, and life is impossible. Is this just luck?</p>
+
+                <p style="margin-top: 15px;"><strong>3. The Origin of Natural Laws:</strong><br>
+                Where did the laws of physics come from? Why do these laws exist rather than others—or no laws at all?</p>
+
+                <p style="margin-top: 15px;"><strong>4. The Beginning of Time:</strong><br>
+                If time itself began at the Big Bang, what does "before" even mean? Doesn't a beginning require a timeless Beginner?</p>
+            </div>
+
+            <div class="question-box">
+                <h3>💭 For Your Preparation:</h3>
+                <p>Research: <strong>Kalam Cosmological Argument</strong> (William Lane Craig), <strong>Fine-Tuning Argument</strong>, and <strong>Contingency Argument</strong>. How do these support the case for God as Creator?</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Claim 2: Life Arose Naturally from Non-Life</h2>
+
+            <div class="claim-box">
+                <h3>The Naturalistic Position:</h3>
+                <p><strong>"Life began through natural chemical processes (abiogenesis) approximately 3.5-4 billion years ago. Simple molecules combined into more complex ones, eventually forming self-replicating molecules and primitive cells. No intelligence or design required."</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Supporting Arguments:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>Miller-Urey Experiment (1953):</strong> Showed that amino acids (building blocks of proteins) can form from simple chemicals under early Earth conditions</li>
+                    <li><strong>RNA World Hypothesis:</strong> RNA molecules may have been the first self-replicating molecules</li>
+                    <li><strong>Deep-Sea Vents:</strong> Hydrothermal vents may have provided energy and chemicals for early life</li>
+                    <li><strong>Time and Chance:</strong> Given billions of years and countless chemical reactions, unlikely events become probable</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>🎯 Questions to Prepare Responses For:</h3>
+
+                <p><strong>1. The Information Problem:</strong><br>
+                DNA contains vast amounts of specified, functional information. Where did this information come from? Information always comes from intelligence in our experience—why would life be different?</p>
+
+                <p style="margin-top: 15px;"><strong>2. Irreducible Complexity:</strong><br>
+                Many biological systems require multiple parts working together to function (e.g., bacterial flagellum, blood clotting cascade). How could these arise gradually when they don't work unless all parts are present?</p>
+
+                <p style="margin-top: 15px;"><strong>3. The Chirality Problem:</strong><br>
+                Life uses only "left-handed" amino acids and "right-handed" sugars. Random chemistry produces both equally. How did life select only one type?</p>
+
+                <p style="margin-top: 15px;"><strong>4. The Origin vs. Evolution Confusion:</strong><br>
+                Evolution by natural selection requires self-replicating organisms. How did the FIRST replicator arise? Natural selection can't work until there's something TO select.</p>
+
+                <p style="margin-top: 15px;"><strong>5. Never Observed:</strong><br>
+                Despite decades of research, scientists have never created life from non-life in the lab. Why should we believe it happened by accident?</p>
+            </div>
+
+            <div class="question-box">
+                <h3>💭 For Your Preparation:</h3>
+                <p>Research: <strong>Origin of Life research</strong> (current state), <strong>Stephen Meyer's "Signature in the Cell"</strong>, and <strong>James Tour's lectures</strong> on abiogenesis impossibility.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Claim 3: Evolution Explains All Life's Diversity</h2>
+
+            <div class="claim-box">
+                <h3>The Naturalistic Position:</h3>
+                <p><strong>"All life descended from a common ancestor through evolution by natural selection. Random mutations create variation; natural selection preserves beneficial traits. Over millions of years, this process produced all the diversity of life we see today—from bacteria to humans."</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Supporting Arguments:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>Fossil Record:</strong> Shows progression from simple to complex life forms over time</li>
+                    <li><strong>Comparative Anatomy:</strong> Similar structures in different animals suggest common ancestry</li>
+                    <li><strong>DNA Similarities:</strong> Humans share ~98-99% DNA with chimpanzees, suggesting common ancestor</li>
+                    <li><strong>Observed Microevolution:</strong> Small changes within species observed in bacteria, finches, etc.</li>
+                    <li><strong>Biogeography:</strong> Distribution of species matches evolutionary predictions</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>🎯 Questions to Prepare Responses For:</h3>
+
+                <p><strong>1. Microevolution vs. Macroevolution:</strong><br>
+                Yes, we observe small changes (bacteria developing antibiotic resistance, finch beak sizes changing). But has anyone observed one KIND of animal becoming a different KIND? Variation within a kind ≠ creating new kinds.</p>
+
+                <p style="margin-top: 15px;"><strong>2. Fossil Gaps:</strong><br>
+                Darwin himself said the fossil record's gaps were "the most obvious and gravest objection" to his theory. 160+ years later, the gaps remain. Where are the countless transitional forms?</p>
+
+                <p style="margin-top: 15px;"><strong>3. Cambrian Explosion:</strong><br>
+                ~540 million years ago, most major animal body plans appear suddenly in the fossil record (geologically speaking) with no ancestors. How does gradual evolution explain this?</p>
+
+                <p style="margin-top: 15px;"><strong>4. Molecular Machines:</strong><br>
+                Cells contain molecular machines more complex than human technology (ATP synthase, DNA replication machinery). Can random mutation + selection really build such systems?</p>
+
+                <p style="margin-top: 15px;"><strong>5. Genetic Information Increase:</strong><br>
+                Evolution requires NEW genetic information to arise. But mutations typically LOSE or SHUFFLE existing information. Where do the new genes come from?</p>
+            </div>
+
+            <div class="question-box">
+                <h3>💭 For Your Preparation:</h3>
+                <p>Research: <strong>Intelligent Design arguments</strong> (Discovery Institute), <strong>created kinds vs. species</strong>, <strong>Michael Behe's "Darwin's Black Box"</strong>, and <strong>information theory</strong>.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Claim 4: Humans Are Just Advanced Apes</h2>
+
+            <div class="claim-box">
+                <h3>The Naturalistic Position:</h3>
+                <p><strong>"Humans evolved from ape-like ancestors over the past 6-7 million years. We share a common ancestor with modern chimpanzees. There's nothing special about humans—we're just another animal species, more intelligent but not fundamentally different."</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Supporting Arguments:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>DNA Similarity:</strong> Humans and chimps share 98-99% DNA</li>
+                    <li><strong>Fossil Hominids:</strong> Australopithecus, Homo habilis, Homo erectus show progression toward modern humans</li>
+                    <li><strong>Vestigial Organs:</strong> Appendix, tailbone, wisdom teeth are "leftovers" from our evolutionary past</li>
+                    <li><strong>Behavioral Similarities:</strong> Apes show intelligence, tool use, even basic "culture"</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>🎯 Questions to Prepare Responses For:</h3>
+
+                <p><strong>1. The Image of God:</strong><br>
+                Humans uniquely possess: rationality, morality, language, art, worship, self-awareness, ability to contemplate eternity. No animal comes close. How did these arise from mindless processes?</p>
+
+                <p style="margin-top: 15px;"><strong>2. The DNA Similarity Argument:</strong><br>
+                98% DNA similarity sounds impressive—but that 1-2% difference represents ~35 MILLION base pair differences! Also, similarity suggests common Designer as much as common ancestor (like cars sharing parts).</p>
+
+                <p style="margin-top: 15px;"><strong>3. The Fossil Record Problems:</strong><br>
+                Many "ape-man" fossils are disputed—some fully ape, some fully human, some fraudulent (Piltdown Man). The clear progression story is not as clear as often presented.</p>
+
+                <p style="margin-top: 15px;"><strong>4. The Moral Problem:</strong><br>
+                If we're just animals, why are we morally accountable? Animals aren't blamed for "murder" or "theft." Where did objective morality come from in a purely materialistic worldview?</p>
+
+                <p style="margin-top: 15px;"><strong>5. Mind and Consciousness:</strong><br>
+                How did purely physical processes produce subjective consciousness, free will, and the ability to reason about abstract concepts like mathematics and philosophy?</p>
+            </div>
+
+            <div class="question-box">
+                <h3>💭 For Your Preparation:</h3>
+                <p>Research: <strong>Moral argument for God</strong>, <strong>Argument from consciousness</strong>, <strong>Image of God theology</strong>, and <strong>human exceptionalism</strong>.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Claim 5: No Need for God</h2>
+
+            <div class="claim-box">
+                <h3>The Naturalistic Position:</h3>
+                <p><strong>"Science has explained (or will explain) everything through natural processes. God is an unnecessary hypothesis—a 'God of the gaps' that retreats as science advances. The universe, life, and humanity all arose through natural laws without any supernatural intervention."</strong></p>
+
+                <p style="margin-top: 15px;"><strong>Supporting Arguments:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>Methodological Naturalism:</strong> Science only studies natural causes, and it's been successful</li>
+                    <li><strong>God of the Gaps:</strong> Invoking God to explain what we don't understand is intellectually lazy</li>
+                    <li><strong>Occam's Razor:</strong> The simplest explanation is best—adding God is an unnecessary complication</li>
+                    <li><strong>Naturalism Works:</strong> Science has explained phenomena once attributed to gods (lightning, disease, etc.)</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>🎯 Questions to Prepare Responses For:</h3>
+
+                <p><strong>1. Science Doesn't Eliminate God:</strong><br>
+                Discovering HOW something works doesn't eliminate the need for WHY it works. Knowing how a watch works doesn't mean there's no watchmaker.</p>
+
+                <p style="margin-top: 15px;"><strong>2. Limits of Science:</strong><br>
+                Science can't answer questions about meaning, purpose, morality, consciousness, or why there's something rather than nothing. These require philosophy and theology.</p>
+
+                <p style="margin-top: 15px;"><strong>3. Reverse "Atheism of the Gaps":</strong><br>
+                Saying "evolution will eventually explain it" is also a "gaps" argument. Many evolutionists appeal to unknown future discoveries.</p>
+
+                <p style="margin-top: 15px;"><strong>4. God as Foundation, Not Gap-Filler:</strong><br>
+                Christian theism doesn't invoke God ONLY for what we can't explain. God is the FOUNDATION for why science works at all—the Lawgiver behind natural laws, the Intelligence behind the intelligible universe.</p>
+
+                <p style="margin-top: 15px;"><strong>5. Presuppositions Matter:</strong><br>
+                Methodological naturalism (studying only natural causes) is fine for doing science, but philosophical naturalism (believing ONLY nature exists) is a worldview choice, not a scientific conclusion.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>The Worldview Battle</h2>
+
+            <div class="highlight">
+                <h3>🔍 Recognize: This Is About Worldviews</h3>
+                <p>The debate isn't just about scientific facts—it's about interpreting those facts through different worldview lenses:</p>
+            </div>
+
+            <div class="claim-box">
+                <h3>Naturalistic Worldview:</h3>
+                <ul>
+                    <li><strong>Matter/energy is all that exists</strong> (no God, no soul, no supernatural)</li>
+                    <li><strong>Everything came from natural processes</strong> (no design, no purpose)</li>
+                    <li><strong>Humans are accidents</strong> (cosmic accidents with no ultimate meaning)</li>
+                    <li><strong>Morality is subjective</strong> (evolved preferences, not objective truth)</li>
+                    <li><strong>Death is the end</strong> (no afterlife, no judgment, no hope beyond this life)</li>
+                </ul>
+            </div>
+
+            <div class="question-box">
+                <h3>Christian Worldview:</h3>
+                <ul>
+                    <li><strong>God created everything</strong> (the universe, laws of nature, life)</li>
+                    <li><strong>Purpose and design are real</strong> (creation reflects the Creator)</li>
+                    <li><strong>Humans are made in God's image</strong> (special, valuable, morally responsible)</li>
+                    <li><strong>Objective morality exists</strong> (grounded in God's character)</li>
+                    <li><strong>This life is not the end</strong> (resurrection, eternal life with God)</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>💡 Key Insight:</h3>
+                <p>Both worldviews look at the SAME evidence (fossils, DNA, cosmic background radiation) but interpret it differently. The question isn't "science vs. faith"—it's "which worldview best explains ALL of reality, including science, morality, consciousness, and meaning?"</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Preparing Your Defense</h2>
+
+            <div class="question-box">
+                <h3>📚 Areas to Study:</h3>
+
+                <p><strong>1. Philosophical Arguments for God:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li>Cosmological Argument (why is there something rather than nothing?)</li>
+                    <li>Teleological Argument (design in nature)</li>
+                    <li>Moral Argument (where does objective morality come from?)</li>
+                    <li>Argument from Consciousness</li>
+                    <li>Argument from Reason (if our brains are products of blind evolution, why trust them?)</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong>2. Scientific Challenges to Naturalism:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li>Fine-tuning of the universe</li>
+                    <li>Origin of biological information</li>
+                    <li>Cambrian explosion and fossil gaps</li>
+                    <li>Irreducible complexity</li>
+                    <li>Abiogenesis impossibility</li>
+                </ul>
+
+                <p style="margin-top: 15px;"><strong>3. Biblical Foundations:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li>Genesis 1-2: Creation account</li>
+                    <li>Psalm 19: Creation declares God's glory</li>
+                    <li>Romans 1:20: God's invisible qualities seen in creation</li>
+                    <li>John 1:1-3: Jesus as Creator</li>
+                    <li>Colossians 1:16-17: All things created through Christ and held together by Him</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Common Objections You'll Face</h2>
+
+            <div class="highlight">
+                <h3>❌ Objection 1: "You can't take Genesis literally!"</h3>
+                <p><strong>Response Approach:</strong> Discuss genre, authorial intent, and how ancient audiences would have understood it. Also, even if Genesis 1-2 is figurative poetry, it still affirms God as Creator.</p>
+            </div>
+
+            <div class="highlight">
+                <h3>❌ Objection 2: "Faith and science are incompatible!"</h3>
+                <p><strong>Response Approach:</strong> Many founders of modern science were Christians (Newton, Kepler, Pasteur). Science depends on an orderly, rational universe—consistent with a rational Creator. Faith and science answer different questions (how vs. why).</p>
+            </div>
+
+            <div class="highlight">
+                <h3>❌ Objection 3: "Evolution is a proven fact!"</h3>
+                <p><strong>Response Approach:</strong> Define terms. Microevolution (small changes) is observed. Macroevolution (new body plans, new genetic information) has not been observed. Don't argue against science—argue for better interpretation.</p>
+            </div>
+
+            <div class="highlight">
+                <h3>❌ Objection 4: "Who created God?"</h3>
+                <p><strong>Response Approach:</strong> God, by definition, is eternal and uncaused. Everything that BEGINS to exist needs a cause. The universe began; God didn't. The question misunderstands the nature of God.</p>
+            </div>
+
+            <div class="highlight">
+                <h3>❌ Objection 5: "Religion is just wishful thinking!"</h3>
+                <p><strong>Response Approach:</strong> Desire for something doesn't make it false (we desire food, and food exists). Also, atheism could be "wishful thinking" too (wishing for no accountability). Focus on evidence, not motives.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>How to Engage Graciously</h2>
+
+            <div class="question-box">
+                <h3>✅ DO:</h3>
+                <ul>
+                    <li><strong>Listen carefully</strong> to understand their actual position (not a strawman)</li>
+                    <li><strong>Ask questions</strong> to clarify and help them think through implications</li>
+                    <li><strong>Acknowledge common ground</strong> (shared curiosity about origins, desire for truth)</li>
+                    <li><strong>Use evidence and reason</strong> alongside Scripture</li>
+                    <li><strong>Speak with gentleness and respect</strong> (1 Peter 3:15)</li>
+                    <li><strong>Admit when you don't know</strong> something—then go research it!</li>
+                    <li><strong>Focus on the person</strong>, not just winning the argument</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <h3>❌ DON'T:</h3>
+                <ul>
+                    <li><strong>Mock or belittle</strong> those who disagree</li>
+                    <li><strong>Use only "God said it, I believe it"</strong> with non-believers (they don't accept biblical authority yet)</li>
+                    <li><strong>Misrepresent evolution</strong> (understand it properly before critiquing)</li>
+                    <li><strong>Resort to conspiracy theories</strong> ("scientists are all lying!")</li>
+                    <li><strong>Assume all evolutionists are atheists</strong> (some are theistic evolutionists)</li>
+                    <li><strong>Get angry or defensive</strong> when challenged</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>🎯 Remember the Goal:</h3>
+                <p>The goal isn't to "win" arguments—it's to faithfully represent Christ, remove intellectual obstacles to faith, and plant seeds of truth in love. Trust the Holy Spirit to do the heart work; you're responsible for faithful witness.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Discussion Questions for Your Group</h2>
+
+            <div class="question-box">
+                <h3>🧠 Questions to Prepare:</h3>
+
+                <p><strong>1. Causation:</strong><br>
+                How would you respond to: "If everything needs a cause, who caused God?"</p>
+
+                <p style="margin-top: 15px;"><strong>2. Evidence:</strong><br>
+                What scientific evidence most strongly supports intelligent design? How would you explain it to a skeptic?</p>
+
+                <p style="margin-top: 15px;"><strong>3. Morality:</strong><br>
+                How does the evolutionary worldview struggle to account for objective moral values? What moral argument would you present for God's existence?</p>
+
+                <p style="margin-top: 15px;"><strong>4. Information:</strong><br>
+                How would you explain the origin of genetic information problem to someone unfamiliar with it?</p>
+
+                <p style="margin-top: 15px;"><strong>5. Fine-Tuning:</strong><br>
+                What are the best examples of fine-tuning in the universe? How does this point to a Designer?</p>
+
+                <p style="margin-top: 15px;"><strong>6. Fossils:</strong><br>
+                How would you address the claim that the fossil record proves evolution?</p>
+
+                <p style="margin-top: 15px;"><strong>7. Common Ancestry:</strong><br>
+                How do you respond to DNA similarity between humans and apes?</p>
+
+                <p style="margin-top: 15px;"><strong>8. Faith and Reason:</strong><br>
+                How would you respond to: "Christians just have blind faith; science has evidence"?</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Resources for Further Study</h2>
+
+            <div class="claim-box">
+                <h3>📖 Recommended Books:</h3>
+                <ul>
+                    <li><strong>"The Case for a Creator"</strong> by Lee Strobel (accessible overview)</li>
+                    <li><strong>"Signature in the Cell"</strong> by Stephen Meyer (origin of life)</li>
+                    <li><strong>"Darwin's Doubt"</strong> by Stephen Meyer (Cambrian explosion)</li>
+                    <li><strong>"I Don't Have Enough Faith to Be an Atheist"</strong> by Norm Geisler & Frank Turek</li>
+                    <li><strong>"The Language of God"</strong> by Francis Collins (Christian geneticist's perspective)</li>
+                    <li><strong>"Mere Christianity"</strong> by C.S. Lewis (philosophical foundations)</li>
+                </ul>
+            </div>
+
+            <div class="question-box">
+                <h3>🎥 Online Resources:</h3>
+                <ul>
+                    <li><strong>Discovery Institute</strong> (intelligent design research)</li>
+                    <li><strong>Reasons to Believe</strong> (Hugh Ross - old earth creationist)</li>
+                    <li><strong>Answers in Genesis</strong> (young earth creationist perspective)</li>
+                    <li><strong>Cross Examined (Frank Turek)</strong> (apologetics ministry)</li>
+                    <li><strong>William Lane Craig debates</strong> (philosophical arguments)</li>
+                    <li><strong>BioLogos</strong> (theistic evolution perspective - for understanding other views)</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>⚠️ Note on Christian Perspectives:</h3>
+                <p>Christians hold different views on HOW God created (young earth, old earth, theistic evolution, intelligent design). What unites us: <strong>God is Creator, humans bear His image, and Christ is Lord.</strong> Don't let secondary issues divide you from fellow believers. Focus on defending the essentials.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Final Encouragement</h2>
+
+            <div class="question-box">
+                <h3>💪 Stand Firm in the Faith</h3>
+                <p><em>"See to it that no one takes you captive through hollow and deceptive philosophy, which depends on human tradition and the elemental spiritual forces of this world rather than on Christ."</em> <strong>— Colossians 2:8</strong></p>
+            </div>
+
+            <div class="claim-box">
+                <h3>🌟 Remember:</h3>
+                <ul>
+                    <li><strong>Christianity is intellectually defensible</strong> - You don't have to commit intellectual suicide to follow Jesus</li>
+                    <li><strong>Science and faith are allies</strong> - Properly understood, they complement each other</li>
+                    <li><strong>You have good reasons to believe</strong> - Historical, philosophical, and scientific evidence supports the Christian worldview</li>
+                    <li><strong>The Holy Spirit convicts</strong> - Your job is faithful witness; conversion is God's work</li>
+                    <li><strong>Truth matters</strong> - The question of origins has implications for meaning, morality, and destiny</li>
+                </ul>
+            </div>
+
+            <div class="challenge-box">
+                <h3>🎯 Action Steps:</h3>
+                <p>Before our meeting:</p>
+                <ol style="margin-top: 10px;">
+                    <li>Review all slides and take notes on questions you have</li>
+                    <li>Choose 2-3 arguments to study deeply</li>
+                    <li>Practice explaining one argument clearly in your own words</li>
+                    <li>Pray for wisdom, knowledge, and a gentle spirit</li>
+                    <li>Prepare questions to discuss with the group</li>
+                </ol>
+            </div>
+
+            <div class="highlight">
+                <h3>🙏 Prayer:</h3>
+                <p style="font-style: italic;">"Lord, give us wisdom to understand, courage to speak truth, and grace to represent You well. Help us to love those who disagree, to pursue truth fearlessly, and to trust You with the results. In Jesus' name, Amen."</p>
+            </div>
+
+            <p style="text-align: center; margin-top: 30px; font-size: 1.2em; color: #19547b;">
+                <strong>"In the beginning, God created the heavens and the earth." — Genesis 1:1</strong>
+            </p>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">13</span></span>
+        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 13;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+
+            if (n > totalSlides) currentSlide = totalSlides;
+            if (n < 1) currentSlide = 1;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide - 1].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide;
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Initialize
+        showSlide(1);
+    </script>
+</body>
+</html>

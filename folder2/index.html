@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrational Numbers - Proof That √2 Cannot Be a Fraction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+        }
+
+        .slides-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #c0392b;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        p, li {
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .proof-box {
+            background: #e8f4f8;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .example {
+            background: #f0f8f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #27ae60;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #c0392b;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #e74c3c;
+            transform: scale(1.05);
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #c0392b;
+            color: #c0392b;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #c0392b;
+            color: white;
+        }
+
+        ul {
+            margin-left: 30px;
+        }
+
+        .math {
+            font-family: 'Courier New', monospace;
+            background: #f5f5f5;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 1.05em;
+        }
+
+        .center {
+            text-align: center;
+            font-size: 1.3em;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="home-btn">← Home</a>
+
+    <div class="slides-container">
+        <div class="slide active">
+            <h1>🔢 Irrational Numbers</h1>
+            <h2>Numbers That Can't Be Fractions!</h2>
+
+            <div class="highlight">
+                <p><strong>Shocking Discovery:</strong> Ancient Greeks discovered that some numbers CANNOT be written as fractions—no matter how hard you try!</p>
+            </div>
+
+            <p><strong>What's a rational number?</strong><br>
+            A number that can be written as a fraction of two integers (whole numbers).</p>
+
+            <div class="example">
+                <h3>Examples of Rational Numbers:</h3>
+                <ul>
+                    <li><span class="math">1/2 = 0.5</span></li>
+                    <li><span class="math">3/4 = 0.75</span></li>
+                    <li><span class="math">22/7 ≈ 3.142857...</span> (approximation of π)</li>
+                    <li><span class="math">5 = 5/1</span> (whole numbers are rational too!)</li>
+                    <li><span class="math">0.333... = 1/3</span> (repeating decimals are rational)</li>
+                </ul>
+            </div>
+
+            <p><strong>What's an irrational number?</strong><br>
+            A number that CANNOT be written as a fraction. Its decimal goes on forever without repeating!</p>
+
+            <div class="example">
+                <h3>Examples of Irrational Numbers:</h3>
+                <ul>
+                    <li><span class="math">√2 = 1.41421356...</span> (never ends, never repeats)</li>
+                    <li><span class="math">π = 3.14159265...</span> (never ends, never repeats)</li>
+                    <li><span class="math">e = 2.71828182...</span> (never ends, never repeats)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>The Discovery: A Crisis in Mathematics!</h2>
+
+            <p>Around 500 BC, the Pythagoreans believed ALL numbers could be expressed as fractions. This belief was central to their philosophy.</p>
+
+            <div class="highlight">
+                <p><strong>The Problem:</strong> What is the length of the diagonal of a square with sides of length 1?</p>
+                <p style="text-align: center; font-size: 3em; margin: 20px 0;">◻</p>
+                <p>By the Pythagorean theorem: <span class="math">1² + 1² = diagonal²</span></p>
+                <p>So: <span class="math">diagonal = √2</span></p>
+            </div>
+
+            <div class="proof-box">
+                <p>They tried to write √2 as a fraction... but couldn't!</p>
+                <ul>
+                    <li><span class="math">1/1 = 1</span> (too small)</li>
+                    <li><span class="math">3/2 = 1.5</span> (too big)</li>
+                    <li><span class="math">7/5 = 1.4</span> (close, but not exact)</li>
+                    <li><span class="math">17/12 = 1.41666...</span> (closer, but still not exact)</li>
+                </ul>
+                <p><strong>No matter what fraction they tried, it was never exactly √2!</strong></p>
+            </div>
+
+            <p>Legend says that when Hippasus proved √2 was irrational, his fellow Pythagoreans were so upset they threw him off a ship! 🌊</p>
+        </div>
+
+        <div class="slide">
+            <h2>The Proof (Part 1): Setup</h2>
+
+            <p>We'll prove that √2 CANNOT be written as a fraction. Again, we'll use <strong>proof by contradiction</strong>!</p>
+
+            <div class="proof-box">
+                <h3>Step 1: Assume the Opposite</h3>
+                <p>Let's assume √2 CAN be written as a fraction in lowest terms:</p>
+                <p class="center"><span class="math">√2 = a/b</span></p>
+                <p>where a and b are whole numbers with NO common factors (the fraction is fully reduced).</p>
+            </div>
+
+            <div class="example">
+                <h3>What does "lowest terms" mean?</h3>
+                <ul>
+                    <li><span class="math">6/8</span> is NOT in lowest terms (can reduce to 3/4)</li>
+                    <li><span class="math">3/4</span> IS in lowest terms (no common factors)</li>
+                    <li>If a/b is in lowest terms, then a and b cannot BOTH be even</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Remember this:</strong> Since a/b is in lowest terms, a and b have NO common factors. In particular, they can't BOTH be even!</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>The Proof (Part 2): Squaring Both Sides</h2>
+
+            <div class="proof-box">
+                <h3>Step 2: Square Both Sides</h3>
+                <p>Starting with: <span class="math">√2 = a/b</span></p>
+                <p>Square both sides: <span class="math">2 = a²/b²</span></p>
+                <p>Multiply both sides by b²: <span class="math">2b² = a²</span></p>
+            </div>
+
+            <div class="highlight">
+                <h3>Key Observation #1:</h3>
+                <p>The equation <span class="math">2b² = a²</span> tells us that a² is an EVEN number (because it equals 2 times something).</p>
+            </div>
+
+            <div class="example">
+                <h3>Important Fact About Squares:</h3>
+                <p>If a² is even, then a must also be even.</p>
+                <p><strong>Why?</strong></p>
+                <ul>
+                    <li>If a is odd, then a² is odd (odd × odd = odd)</li>
+                    <li>If a is even, then a² is even (even × even = even)</li>
+                </ul>
+                <p>So if a² is even, a MUST be even!</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>The Proof (Part 3): Finding the Contradiction</h2>
+
+            <div class="proof-box">
+                <h3>Step 3: If a is even...</h3>
+                <p>Since a is even, we can write: <span class="math">a = 2k</span> (for some whole number k)</p>
+                <p>Substitute back into our equation: <span class="math">2b² = a²</span></p>
+                <p class="center"><span class="math">2b² = (2k)²</span></p>
+                <p class="center"><span class="math">2b² = 4k²</span></p>
+                <p>Divide both sides by 2: <span class="math">b² = 2k²</span></p>
+            </div>
+
+            <div class="highlight">
+                <h3>Key Observation #2:</h3>
+                <p>The equation <span class="math">b² = 2k²</span> tells us that b² is EVEN (because it equals 2 times something).</p>
+                <p>And if b² is even, then <strong>b must also be even!</strong></p>
+            </div>
+
+            <div class="proof-box" style="background: #ffe6e6; border-left-color: #c0392b;">
+                <h3 style="color: #c0392b;">🎯 THE CONTRADICTION!</h3>
+                <p><strong>We just proved:</strong></p>
+                <ul>
+                    <li>a is even</li>
+                    <li>b is even</li>
+                </ul>
+                <p><strong>But we started by saying:</strong> a and b have NO common factors (the fraction a/b is in lowest terms)!</p>
+                <p style="font-size: 1.2em; margin-top: 15px;"><strong>If both a and b are even, they have 2 as a common factor! CONTRADICTION! ❌</strong></p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Conclusion: √2 is Irrational!</h2>
+
+            <div class="proof-box">
+                <h3>What We Proved:</h3>
+                <p>Our assumption that √2 = a/b (in lowest terms) led to an impossible contradiction.</p>
+                <p style="text-align: center; font-size: 1.4em; color: #27ae60; margin: 20px 0;">
+                    <strong>Therefore, √2 CANNOT be written as a fraction!</strong>
+                </p>
+                <p style="text-align: center; font-size: 1.3em;">
+                    <strong>√2 is IRRATIONAL! ✓</strong>
+                </p>
+            </div>
+
+            <div class="highlight">
+                <h3>🧠 What This Means:</h3>
+                <ul>
+                    <li>There are "gaps" in the rational numbers</li>
+                    <li>You can't measure everything with fractions</li>
+                    <li>The number line has infinitely many irrational numbers</li>
+                    <li>In fact, there are MORE irrational numbers than rational numbers!</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <h3>Other Irrational Numbers:</h3>
+                <p>The same proof technique shows these are irrational:</p>
+                <ul>
+                    <li>√3, √5, √7, √11, ... (square roots of non-perfect squares)</li>
+                    <li>∛2 (cube root of 2)</li>
+                    <li>π (ratio of circumference to diameter)</li>
+                    <li>e (base of natural logarithms)</li>
+                    <li>φ (golden ratio)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Why This Matters</h2>
+
+            <div class="example">
+                <h3>🎨 Beauty of Mathematics:</h3>
+                <ul>
+                    <li>This proof is over 2,500 years old and still perfect!</li>
+                    <li>Uses only basic arithmetic and logic</li>
+                    <li>Shows that some truths can be known with absolute certainty</li>
+                    <li>Demonstrates the power of logical reasoning</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <h3>💡 Lessons in Logic:</h3>
+                <ul>
+                    <li><strong>Proof by contradiction:</strong> Assume the opposite, find the impossibility</li>
+                    <li><strong>Rigorous thinking:</strong> Each step follows necessarily from the previous</li>
+                    <li><strong>Surprising discoveries:</strong> Sometimes reality doesn't match our assumptions</li>
+                    <li><strong>Building on basics:</strong> Even simple concepts (even/odd) lead to profound results</li>
+                </ul>
+            </div>
+
+            <div class="proof-box">
+                <h3>🌟 For Discussion:</h3>
+                <p>The Greeks were so committed to their belief that "all is number" (meaning fractions) that they tried to suppress this discovery. What does this teach us about being willing to follow evidence even when it contradicts our beliefs?</p>
+            </div>
+
+            <div class="example">
+                <h3>🔬 Real Applications:</h3>
+                <ul>
+                    <li><strong>Engineering:</strong> Understanding limits of precision</li>
+                    <li><strong>Computer Science:</strong> Floating-point arithmetic and rounding errors</li>
+                    <li><strong>Physics:</strong> Irrational numbers appear everywhere in nature</li>
+                    <li><strong>Music:</strong> Musical intervals involve irrational ratios</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">7</span></span>
+        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 7;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+
+            if (n > totalSlides) currentSlide = totalSlides;
+            if (n < 1) currentSlide = 1;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide - 1].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide;
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Initialize
+        showSlide(1);
+    </script>
+</body>
+</html>

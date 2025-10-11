@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Primes - Euclid's Proof</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+        }
+
+        .slides-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #d35400;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #e67e22;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        p, li {
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .proof-box {
+            background: #e8f4f8;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .example {
+            background: #f0f8f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #27ae60;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #d35400;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #e67e22;
+            transform: scale(1.05);
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #d35400;
+            color: #d35400;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #d35400;
+            color: white;
+        }
+
+        ul {
+            margin-left: 30px;
+        }
+
+        .math {
+            font-family: 'Courier New', monospace;
+            background: #f5f5f5;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 1.05em;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="home-btn">← Home</a>
+
+    <div class="slides-container">
+        <div class="slide active">
+            <h1>🔢 Infinite Prime Numbers</h1>
+            <h2>Euclid's Elegant Proof</h2>
+
+            <div class="highlight">
+                <p><strong>Question:</strong> Do prime numbers go on forever, or is there a "biggest" prime number?</p>
+            </div>
+
+            <p>About 2,300 years ago, the Greek mathematician Euclid proved something amazing: <strong>there are infinitely many prime numbers!</strong></p>
+
+            <p><strong>What's a prime number?</strong><br>
+            A number greater than 1 that can only be divided evenly by 1 and itself.</p>
+
+            <div class="example">
+                <strong>Examples:</strong>
+                <ul>
+                    <li>2, 3, 5, 7, 11, 13, 17, 19, 23, 29...</li>
+                    <li>2 is prime (only divisible by 1 and 2)</li>
+                    <li>4 is NOT prime (divisible by 1, 2, and 4)</li>
+                    <li>7 is prime (only divisible by 1 and 7)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>The Proof (Part 1): Proof by Contradiction</h2>
+
+            <p>Euclid used a clever method called <strong>"proof by contradiction"</strong>:</p>
+
+            <div class="proof-box">
+                <ol>
+                    <li><strong>Assume the opposite</strong> of what you want to prove</li>
+                    <li><strong>Show that leads to a contradiction</strong> (something impossible)</li>
+                    <li><strong>Therefore, the opposite must be true!</strong></li>
+                </ol>
+            </div>
+
+            <p><strong>Step 1:</strong> Let's assume there are only FINITELY many primes.</p>
+
+            <p>That means we could list all of them:<br>
+            <span class="math">p₁, p₂, p₃, ... pₙ</span></p>
+
+            <p>For example, suppose these were ALL the primes: <span class="math">2, 3, 5, 7, 11</span></p>
+
+            <div class="highlight">
+                <p>Now we're going to show this assumption leads to something impossible!</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>The Proof (Part 2): Creating a New Number</h2>
+
+            <p><strong>Step 2:</strong> Multiply all the primes together and add 1:</p>
+
+            <div class="proof-box">
+                <p style="text-align: center; font-size: 1.3em;">
+                    <span class="math">N = (p₁ × p₂ × p₃ × ... × pₙ) + 1</span>
+                </p>
+            </div>
+
+            <p><strong>Using our example:</strong></p>
+            <div class="example">
+                <p><span class="math">N = (2 × 3 × 5 × 7 × 11) + 1</span></p>
+                <p><span class="math">N = 2310 + 1 = 2311</span></p>
+            </div>
+
+            <p>Now here's the key insight: What happens when we try to divide N by any of our "complete list" of primes?</p>
+
+            <div class="highlight">
+                <p><strong>Try dividing 2311 by any prime on our list:</strong></p>
+                <ul>
+                    <li>2311 ÷ 2 = 1155 remainder <strong>1</strong></li>
+                    <li>2311 ÷ 3 = 770 remainder <strong>1</strong></li>
+                    <li>2311 ÷ 5 = 462 remainder <strong>1</strong></li>
+                    <li>2311 ÷ 7 = 330 remainder <strong>1</strong></li>
+                    <li>2311 ÷ 11 = 210 remainder <strong>1</strong></li>
+                </ul>
+                <p><strong>Every division leaves a remainder of 1!</strong></p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>The Proof (Part 3): The Contradiction!</h2>
+
+            <p>So N is not divisible by any prime on our "complete list."</p>
+
+            <p><strong>But every number greater than 1 is either:</strong></p>
+            <ul>
+                <li>Prime itself, OR</li>
+                <li>Divisible by at least one prime number</li>
+            </ul>
+
+            <div class="proof-box">
+                <p><strong>Case 1:</strong> If N is prime, then we found a NEW prime not on our list!</p>
+                <p><strong>Case 2:</strong> If N is not prime, it must be divisible by SOME prime number—but we showed it's not divisible by any prime on our list. So there must be a NEW prime (that divides N) not on our list!</p>
+            </div>
+
+            <div class="highlight">
+                <h3 style="color: #c0392b;">🎯 The Contradiction:</h3>
+                <p>We assumed we had ALL the primes, but we just proved there's at least one MORE prime not on our list!</p>
+                <p><strong>This is impossible!</strong></p>
+            </div>
+
+            <p><strong>Conclusion:</strong> Our assumption must be wrong. There is NO finite list of all primes.</p>
+
+            <p style="text-align: center; font-size: 1.4em; color: #27ae60; margin-top: 30px;">
+                <strong>Therefore, there are INFINITELY many prime numbers! ✓</strong>
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>Why This Proof is Beautiful</h2>
+
+            <div class="example">
+                <h3>🎨 Elegance in Simplicity</h3>
+                <ul>
+                    <li>Uses only basic arithmetic (multiplication and addition)</li>
+                    <li>The logic is crystal clear once you see it</li>
+                    <li>Works no matter which primes you start with</li>
+                    <li>Proven 2,300 years ago and still perfect today!</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <h3>💡 What We Learn About Logic:</h3>
+                <ul>
+                    <li><strong>Proof by contradiction</strong> is powerful</li>
+                    <li>Sometimes we prove things WITHOUT finding an example</li>
+                    <li>Math gives us certainty—this isn't just "probably true," it's DEFINITELY true forever</li>
+                    <li>Good reasoning can reveal truths about infinity!</li>
+                </ul>
+            </div>
+
+            <div class="proof-box">
+                <h3>🧠 For Discussion:</h3>
+                <p>Can you think of other times when assuming the opposite helps you prove something? This logical technique is used in debates, science, and even everyday problem-solving!</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Fun Facts About Primes</h2>
+
+            <div class="example">
+                <h3>🔍 Interesting Prime Facts:</h3>
+                <ul>
+                    <li><strong>Largest known prime:</strong> As of 2024, the largest known prime has over 41 million digits!</li>
+                    <li><strong>Twin primes:</strong> Pairs like (11, 13), (17, 19), (29, 31) — just 2 apart</li>
+                    <li><strong>Prime gaps:</strong> The gaps between consecutive primes can be arbitrarily large</li>
+                    <li><strong>Only even prime:</strong> The number 2 (all others must be odd)</li>
+                    <li><strong>Goldbach's Conjecture:</strong> Every even number > 2 can be written as the sum of two primes (still unproven!)</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <h3>🌟 Real-World Uses:</h3>
+                <ul>
+                    <li><strong>Internet Security:</strong> Your online banking uses HUGE prime numbers for encryption</li>
+                    <li><strong>Cryptography:</strong> Secret codes rely on the difficulty of factoring large numbers into primes</li>
+                    <li><strong>Computer Science:</strong> Hash tables and algorithms use prime numbers</li>
+                </ul>
+            </div>
+
+            <p style="margin-top: 30px; font-size: 1.1em;"><strong>Challenge:</strong> Can you find the next prime after 2311? (Hint: It's not far away!)</p>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">6</span></span>
+        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 6;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+
+            if (n > totalSlides) currentSlide = totalSlides;
+            if (n < 1) currentSlide = 1;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide - 1].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide;
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Initialize
+        showSlide(1);
+    </script>
+</body>
+</html>

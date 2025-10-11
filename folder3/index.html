@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's Third Law - Action & Reaction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            min-height: 100vh;
+        }
+
+        .slides-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #2980b9;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        p, li {
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: #d6eaf8;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+
+        .law-box {
+            background: #fef5e7;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #f39c12;
+            text-align: center;
+        }
+
+        .example {
+            background: #e8f8f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #27ae60;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #2980b9;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #3498db;
+            transform: scale(1.05);
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #2980b9;
+            color: #2980b9;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #2980b9;
+            color: white;
+        }
+
+        ul {
+            margin-left: 30px;
+        }
+
+        .visual {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 3em;
+        }
+
+        .question-box {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="home-btn">← Home</a>
+
+    <div class="slides-container">
+        <div class="slide active">
+            <h1>⚛️ Newton's Third Law</h1>
+            <h2>For Every Action, There's an Equal and Opposite Reaction</h2>
+
+            <div class="law-box">
+                <p style="font-size: 1.4em; font-weight: bold; color: #f39c12; margin-bottom: 15px;">
+                    "For every action, there is an equal and opposite reaction."
+                </p>
+                <p style="color: #555;">— Sir Isaac Newton, 1687</p>
+            </div>
+
+            <p><strong>What does this mean?</strong></p>
+
+            <div class="highlight">
+                <p>When one object exerts a force on a second object, the second object simultaneously exerts a force equal in magnitude and opposite in direction on the first object.</p>
+            </div>
+
+            <p><strong>Key Points:</strong></p>
+            <ul>
+                <li>Forces always come in pairs</li>
+                <li>The forces are equal in strength</li>
+                <li>The forces point in opposite directions</li>
+                <li>The forces act on different objects</li>
+            </ul>
+
+            <div class="visual">
+                👊 ← → 🧱
+            </div>
+
+            <p style="text-align: center; color: #666;">You push the wall → The wall pushes you back ←</p>
+        </div>
+
+        <div class="slide">
+            <h2>Example 1: Walking</h2>
+
+            <div class="visual">
+                🚶 → 🌍
+            </div>
+
+            <div class="example">
+                <h3>When You Walk:</h3>
+                <ul>
+                    <li><strong>Action:</strong> Your foot pushes BACKWARD on the ground</li>
+                    <li><strong>Reaction:</strong> The ground pushes FORWARD on your foot</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Result:</strong> The ground's forward push moves you forward!</p>
+            </div>
+
+            <div class="question-box">
+                <h3>🤔 Think About This:</h3>
+                <p><strong>Why is it hard to walk on ice?</strong></p>
+                <p style="margin-top: 10px;">Ice is slippery! When you push backward, there's not enough friction for the ice to push you forward strongly. Your foot just slips!</p>
+            </div>
+
+            <div class="highlight">
+                <h3>💡 Key Insight:</h3>
+                <p>You don't move yourself forward—the ground moves you! You just push on the ground, and it pushes back.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Example 2: Swimming</h2>
+
+            <div class="visual">
+                🏊 → 💧
+            </div>
+
+            <div class="example">
+                <h3>When You Swim:</h3>
+                <ul>
+                    <li><strong>Action:</strong> Your hands push water BACKWARD</li>
+                    <li><strong>Reaction:</strong> The water pushes you FORWARD</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Result:</strong> You move through the water!</p>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Why do swimmers have big hands/use fins?</strong></p>
+                <p>Bigger surface area means you can push more water backward → Water pushes you forward with more force!</p>
+            </div>
+
+            <div class="question-box">
+                <h3>🤔 Discussion:</h3>
+                <p>If you're floating in the middle of a pool with nothing to hold onto, how can you get to the edge?</p>
+                <p style="margin-top: 10px;"><em>Answer: Throw something (like a ball) away from the edge! When you push the ball, it pushes you in the opposite direction!</em></p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Example 3: Rockets in Space! 🚀</h2>
+
+            <div class="visual">
+                🚀 ↑<br>
+                💨 ↓
+            </div>
+
+            <div class="example">
+                <h3>How Rockets Work:</h3>
+                <ul>
+                    <li><strong>Action:</strong> Rocket pushes hot gas DOWNWARD (very fast!)</li>
+                    <li><strong>Reaction:</strong> Gas pushes rocket UPWARD</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Result:</strong> The rocket accelerates upward into space!</p>
+            </div>
+
+            <div class="highlight">
+                <h3>🌌 Cool Fact About Space:</h3>
+                <p>There's no air in space! So how do rockets turn or slow down?</p>
+                <p style="margin-top: 10px;">They shoot gas in the direction opposite to where they want to go! The gas pushes them in the other direction.</p>
+                <ul style="margin-top: 10px;">
+                    <li>Want to go forward? Shoot gas backward! →</li>
+                    <li>Want to turn left? Shoot gas to the right! ←</li>
+                    <li>Want to slow down? Shoot gas forward! ←</li>
+                </ul>
+            </div>
+
+            <div class="question-box">
+                <h3>⚡ Try This at Home:</h3>
+                <p>Blow up a balloon and let it go without tying it. What happens?</p>
+                <p style="margin-top: 10px;"><em>The air rushes out one direction, and the balloon flies the opposite direction—just like a rocket!</em></p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Example 4: Jumping</h2>
+
+            <div class="visual">
+                🧍 ↑<br>
+                ⬇<br>
+                🌍
+            </div>
+
+            <div class="example">
+                <h3>When You Jump:</h3>
+                <ul>
+                    <li><strong>Action:</strong> You push DOWN on the ground</li>
+                    <li><strong>Reaction:</strong> The ground pushes UP on you</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Result:</strong> You accelerate upward off the ground!</p>
+            </div>
+
+            <div class="question-box">
+                <h3>🤔 Puzzler:</h3>
+                <p><strong>If the forces are equal and opposite, why do YOU move up but the Earth doesn't seem to move down?</strong></p>
+            </div>
+
+            <div class="highlight">
+                <h3>💡 The Answer:</h3>
+                <p>The Earth DOES move down! But Earth is SO massive (about 6,000,000,000,000,000,000,000,000 kg) that its movement is unimaginably tiny—far too small to notice!</p>
+                <p style="margin-top: 10px;">The same force that makes you jump one meter would move the Earth by about 0.00000000000000000000001 meters. Basically nothing! 😄</p>
+                <p style="margin-top: 10px;"><strong>Force is equal, but acceleration depends on mass!</strong></p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Example 5: Bird Flight 🐦</h2>
+
+            <div class="visual">
+                🐦 ↑<br>
+                💨 ↓
+            </div>
+
+            <div class="example">
+                <h3>How Birds Fly:</h3>
+                <ul>
+                    <li><strong>Action:</strong> Wings push air DOWN and BACK</li>
+                    <li><strong>Reaction:</strong> Air pushes bird UP and FORWARD</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Result:</strong> The bird soars through the sky!</p>
+            </div>
+
+            <div class="highlight">
+                <h3>🦅 Why Bigger Birds Need Bigger Wings:</h3>
+                <p>Heavier birds need stronger upward force. To get that, they need to push more air down, which requires bigger wings!</p>
+                <ul style="margin-top: 10px;">
+                    <li>Hummingbird: Tiny wings, light body</li>
+                    <li>Eagle: Large wingspan, heavier body</li>
+                    <li>Ostrich: Too heavy to generate enough force—can't fly!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Common Misconceptions</h2>
+
+            <div class="question-box">
+                <h3>❌ Misconception #1:</h3>
+                <p><strong>"Equal forces cancel out, so nothing moves."</strong></p>
+                <p style="margin-top: 10px;">✅ <strong>Truth:</strong> The action and reaction forces act on DIFFERENT objects! So they don't cancel. When you jump, the ground pushes up on YOU (making you move), while you push down on the GROUND (but it barely moves because it's so massive).</p>
+            </div>
+
+            <div class="question-box">
+                <h3>❌ Misconception #2:</h3>
+                <p><strong>"The reaction happens after the action."</strong></p>
+                <p style="margin-top: 10px;">✅ <strong>Truth:</strong> Action and reaction happen at EXACTLY the same time! They're simultaneous. The instant you push something, it pushes you back.</p>
+            </div>
+
+            <div class="question-box">
+                <h3>❌ Misconception #3:</h3>
+                <p><strong>"Bigger objects exert bigger forces."</strong></p>
+                <p style="margin-top: 10px;">✅ <strong>Truth:</strong> The forces are always equal! If a tiny bug flies into a car windshield, the force the bug exerts on the car equals the force the car exerts on the bug. (But the bug accelerates much more because it has less mass!)</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Everyday Examples You Experience</h2>
+
+            <div class="example">
+                <h3>🏀 Bouncing a Ball:</h3>
+                <p>You throw the ball down → Ball pushes your hand up (you feel the force!)<br>
+                Ball hits ground → Ground pushes ball up (it bounces!)</p>
+            </div>
+
+            <div class="example">
+                <h3>🚗 Driving a Car:</h3>
+                <p>Tires push BACKWARD on road → Road pushes FORWARD on tires → Car moves forward!</p>
+            </div>
+
+            <div class="example">
+                <h3>🔫 Firing a Gun (or Water Gun!):</h3>
+                <p>Gun pushes bullet/water forward → Bullet/water pushes gun backward → You feel the "recoil"!</p>
+            </div>
+
+            <div class="example">
+                <h3>🛹 Skateboarding:</h3>
+                <p>Push foot backward on ground → Ground pushes you forward on skateboard!</p>
+            </div>
+
+            <div class="example">
+                <h3>📱 Dropping Your Phone:</h3>
+                <p>Earth pulls phone down (gravity) → Phone pulls Earth up! (But Earth barely moves because it's so massive)</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Connection to God's Design</h2>
+
+            <div class="highlight">
+                <h3>🌟 Order and Predictability:</h3>
+                <p>Newton's Third Law shows us that the universe operates by consistent, predictable rules. This isn't random chaos—it's an ordered system.</p>
+                <ul style="margin-top: 10px;">
+                    <li>Birds can fly because air ALWAYS pushes back when pushed</li>
+                    <li>We can walk because the ground ALWAYS provides reaction force</li>
+                    <li>Rockets work because physics ALWAYS operates the same way</li>
+                </ul>
+            </div>
+
+            <div class="law-box">
+                <p style="color: #555; font-style: italic;">"The heavens declare the glory of God; the skies proclaim the work of his hands."</p>
+                <p style="color: #777; margin-top: 10px;">— Psalm 19:1</p>
+            </div>
+
+            <div class="example">
+                <h3>💭 For Discussion:</h3>
+                <p><strong>Why can we trust these laws?</strong></p>
+                <p>Newton's laws have worked the same way for thousands of years. We can use them to send rockets to Mars and predict their path exactly. This consistency suggests an orderly, rational Creator rather than random chance.</p>
+                <p style="margin-top: 15px;">In fact, many of history's greatest scientists (including Newton himself!) saw their work as "thinking God's thoughts after Him"—discovering the mathematical rules by which God governs creation.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Summary & Key Takeaways</h2>
+
+            <div class="law-box">
+                <h3>Newton's Third Law:</h3>
+                <p style="font-size: 1.3em; margin: 15px 0;">For every action, there is an equal and opposite reaction.</p>
+            </div>
+
+            <div class="highlight">
+                <h3>✅ Remember:</h3>
+                <ul>
+                    <li>Forces always come in pairs</li>
+                    <li>The forces are equal in magnitude</li>
+                    <li>The forces are opposite in direction</li>
+                    <li>The forces act on different objects</li>
+                    <li>The forces happen simultaneously</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <h3>🎯 Applications:</h3>
+                <ul>
+                    <li>Walking, running, swimming</li>
+                    <li>Flying (birds, planes, rockets)</li>
+                    <li>Driving vehicles</li>
+                    <li>Sports (throwing, hitting, kicking)</li>
+                    <li>Space travel</li>
+                </ul>
+            </div>
+
+            <div class="question-box">
+                <h3>🧠 Challenge Questions:</h3>
+                <p>1. Can you identify action-reaction pairs in your daily activities?</p>
+                <p>2. How would life be different if Newton's Third Law didn't exist?</p>
+                <p>3. What does the consistency of physical laws tell us about the universe?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">10</span></span>
+        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 10;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+
+            if (n > totalSlides) currentSlide = totalSlides;
+            if (n < 1) currentSlide = 1;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide - 1].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide;
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Initialize
+        showSlide(1);
+    </script>
+</body>
+</html>

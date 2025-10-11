@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debate Club - Parent-Child Exploration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .intro {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .topic-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-color: #667eea;
+        }
+
+        .topic-card.warmup {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .topic-card.science {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+
+        .topic-card.debate {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+        }
+
+        .topic-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .topic-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .topic-card p {
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .topic-card.debate h3,
+        .topic-card.debate p {
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .topic-card.debate .btn {
+            background: #fff;
+            color: #19547b;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Debate Club Exploration</h1>
+        <p class="subtitle">Parent-Child Learning & Discussion</p>
+
+        <div class="intro">
+            <h2>Welcome!</h2>
+            <p>This interactive learning experience is designed for parent-child pairs to explore logic, science, and faith together. Start with the math warmups to sharpen your reasoning skills, then explore physics concepts, and finally prepare for our main discussion on origins and faith. Please review all materials before our meeting so you can come prepared with thoughtful responses and questions.</p>
+        </div>
+
+        <div class="topics-grid">
+            <div class="topic-card warmup" onclick="window.location.href='folder1/index.html'">
+                <div class="topic-number">1</div>
+                <h3>Infinite Primes</h3>
+                <p>Explore Euclid's elegant proof that prime numbers never end. A perfect logical warmup!</p>
+                <a href="folder1/index.html" class="btn">Start Learning →</a>
+            </div>
+
+            <div class="topic-card warmup" onclick="window.location.href='folder2/index.html'">
+                <div class="topic-number">2</div>
+                <h3>Irrational Numbers</h3>
+                <p>Discover why some numbers like √2 cannot be expressed as fractions. Mind-bending math!</p>
+                <a href="folder2/index.html" class="btn">Explore Proof →</a>
+            </div>
+
+            <div class="topic-card science" onclick="window.location.href='folder3/index.html'">
+                <div class="topic-number">3</div>
+                <h3>Newton's Third Law</h3>
+                <p>Every action has an equal and opposite reaction. See physics in everyday life!</p>
+                <a href="folder3/index.html" class="btn">Discover Physics →</a>
+            </div>
+
+            <div class="topic-card science" onclick="window.location.href='folder4/index.html'">
+                <div class="topic-number">4</div>
+                <h3>Flat Earth Arguments</h3>
+                <p>Explore common flat earth claims and practice identifying logical fallacies.</p>
+                <a href="folder4/index.html" class="btn">Examine Claims →</a>
+            </div>
+
+            <div class="topic-card debate" onclick="window.location.href='folder5/index.html'">
+                <div class="topic-number">5</div>
+                <h3>⚡ Evolution & Origins</h3>
+                <p><strong>Main Debate Topic:</strong> Understand evolutionary and naturalistic explanations for the universe and life. Prepare your apologetic responses!</p>
+                <a href="folder5/index.html" class="btn">Study & Prepare →</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📅 Please review all materials before our meeting | 💬 Come prepared to discuss and defend your faith with love and respect</p>
+            <p style="margin-top: 10px; font-style: italic;">"Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with gentleness and respect." - 1 Peter 3:15</p>
+        </div>
+    </div>
+</body>
+</html>

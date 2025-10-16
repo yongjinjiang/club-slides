@@ -30,6 +30,7 @@
             margin-bottom: 30px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             display: none;
+            position: relative;
         }
 
         .slide.active {
@@ -155,6 +156,25 @@
             border-radius: 5px;
             font-size: 1.05em;
         }
+
+        .euclid-portrait {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            width: 140px;
+            max-width: 28%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            border: 3px solid #f5c469;
+            background: #fffbe6;
+        }
+
+        .euclid-portrait img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -164,6 +184,10 @@
         <div class="slide active">
             <h1>🔢 Infinite Prime Numbers</h1>
             <h2>Euclid's Elegant Proof</h2>
+
+            <figure class="euclid-portrait" aria-label="Illustration of Euclid">
+                <img src="images/euclid.svg" alt="Stylized portrait of Euclid" />
+            </figure>
 
             <div class="highlight">
                 <p><strong>Question:</strong> Do prime numbers go on forever, or is there a "biggest" prime number?</p>
